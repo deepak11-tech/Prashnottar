@@ -1,0 +1,1 @@
+web: gunicorn prasnotter.wsgi --log-file

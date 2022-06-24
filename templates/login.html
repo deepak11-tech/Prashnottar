@@ -1,0 +1,51 @@
+
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+  <link rel="stylesheet" href="{% static 'css/login.css' %}">
+
+
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous"><link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+
+<div class="box-form">
+	<div class="left">
+		<div class="overlay">
+		<h3>The future of education is here</h3>
+		<p>With an all in one platform for the teaching world</p>
+		</div>
+	</div>
+	
+	<div class="right">
+		<h1>Welcome to Prashnottar!</h1>
+		
+		<!-- <p>Don't have an account? <a href="#">Creat Your Account</a></p> -->
+	    <div class="inputs">
+        <h3> Your Mobile Number</h3>
+        <form method="post">
+              {% csrf_token %}
+        <div class="sam">
+          {{form.phone_number}}
+          <!-- <input type="text" name="phone_number" placeholder="Enter your mobile Number" id="phone" /> -->
+        </div>
+      </div>
+          <br><br>
+          <button type="submit" class="btn">Proceed Securely</button><br><br>
+        </form>  
+          <p>By continuing, you agree to the terms and conditions</p>	
+      
+	</div>
+	
+	
+</div>
+
+  
+</body>
+</html>
